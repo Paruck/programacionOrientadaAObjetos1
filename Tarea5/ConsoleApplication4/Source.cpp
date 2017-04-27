@@ -17,20 +17,21 @@ void insert(const string &v) {
 	pTemp->value = v;
 	pTemp -> next = pHead;
 	pHead = pTemp;
-	//Si descomenta esta linea, imprime los valores sin nuingun problema y comenta la funcion 
-	/*cout << pTemp->value << endl;*/
+	//Asi, imprime todos los valores de los nodos.
+	cout << pTemp->value << endl;
 }
 //	
 
-void print() {
-	for (int i = 0; i < 6; i++) {
-		Node *temp = new Node();
-		temp->next = pHead;
-		temp->value = pHead->value;
-		pHead = temp;
-		cout << temp << endl;
-	}
-}
+// Esta es funcion de imprimir, la cual solo me imprime las direcciones de memoria :(, por eso deje la linea de arriba que si lo hacia bien.
+//void print() {
+//	for (int i = 0; i < 6; i++) {
+//		Node *temp = new Node();
+//		temp->next = pHead;
+//		temp->value = pHead->value;
+//		pHead = temp;
+//		cout << temp << endl;
+//	}
+//}
 
 
 int main()
@@ -38,12 +39,14 @@ int main()
 	insert("a");
 	insert("b");
 	insert("c");
-	insert("a");
-	insert("b");
-	insert("c");
+	insert("d");
+	insert("e");
+	insert("f");
+        insert("g");
+	insert("h");
+	insert("i");
 
-
-	print();
+	//print();
 	system("PAUSE");
 	return 0;
 }
