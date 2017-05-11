@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\emi_s_000\documents\visual studio 2015\projects\sobrecargasypolimorfismo\sobrecargasypolimorfismo\source.cpp(49): error C2065: 'real': identificador no declarado
+c:\users\emi_s_000\documents\visual studio 2015\projects\sobrecargasypolimorfismo\sobrecargasypolimorfismo\source.cpp(49): error C2065: 'imaginario': identificador no declarado
+c:\users\emi_s_000\documents\visual studio 2015\projects\sobrecargasypolimorfismo\sobrecargasypolimorfismo\source.cpp(49): error C2440: 'return': no se puede realizar la conversión de 'Complex' a 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  c:\users\emi_s_000\documents\visual studio 2015\projects\sobrecargasypolimorfismo\sobrecargasypolimorfismo\source.cpp(49): note: Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
