@@ -1,0 +1,4 @@
+﻿  Calendario.cpp
+c:\users\emi_s_000\documents\visual studio 2015\projects\calculadoradecalendario\calculadoradecalendario\calendario.h(5): warning C4215: se ha utilizado una extensión no estándar: long float
+  CalculadoraDeCalendario.vcxproj -> C:\Users\emi_s_000\Documents\Visual Studio 2015\Projects\CalculadoraDeCalendario\Debug\CalculadoraDeCalendario.exe
+  CalculadoraDeCalendario.vcxproj -> C:\Users\emi_s_000\Documents\Visual Studio 2015\Projects\CalculadoraDeCalendario\Debug\CalculadoraDeCalendario.pdb (Full PDB)
