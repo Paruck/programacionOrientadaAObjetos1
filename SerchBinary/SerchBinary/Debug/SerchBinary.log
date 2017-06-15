@@ -1,0 +1,3 @@
+﻿  Source.cpp
+LINK : fatal error LNK1168: no se puede abrir C:\Users\emi_s_000\documents\visual studio 2015\Projects\SerchBinary\Debug\SerchBinary.exe para escritura
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(638,5): error MSB6006: "link.exe" salió con el código 1168.
