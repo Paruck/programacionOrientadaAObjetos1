@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\emi_s\onedrive\documentos\recursos de trimestres pasados\schoolstuff\projects\thevoid\thevoid\source.cpp(10): warning C4018: '<=': no coinciden signed/unsigned
+c:\users\emi_s\onedrive\documentos\recursos de trimestres pasados\schoolstuff\projects\thevoid\thevoid\source.cpp(22): warning C4018: '<=': no coinciden signed/unsigned
+  TheVoid.vcxproj -> C:\Users\emi_s\OneDrive\Documentos\Recursos de trimestres pasados\SchoolStuff\Projects\TheVoid\Debug\TheVoid.exe
+  TheVoid.vcxproj -> C:\Users\emi_s\OneDrive\Documentos\Recursos de trimestres pasados\SchoolStuff\Projects\TheVoid\Debug\TheVoid.pdb (Partial PDB)
