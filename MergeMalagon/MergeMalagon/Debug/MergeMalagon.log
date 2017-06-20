@@ -1,0 +1,7 @@
+﻿  Merge.cpp
+c:\users\marcos\documents\visual studio 2017\projects\mergemalagon\mergemalagon\merge.cpp(15): warning C4018: '<': signed/unsigned mismatch
+c:\users\marcos\documents\visual studio 2017\projects\mergemalagon\mergemalagon\merge.cpp(31): warning C4018: '<': signed/unsigned mismatch
+c:\users\marcos\documents\visual studio 2017\projects\mergemalagon\mergemalagon\merge.cpp(39): warning C4018: '<': signed/unsigned mismatch
+c:\users\marcos\documents\visual studio 2017\projects\mergemalagon\mergemalagon\merge.cpp(46): warning C4018: '<': signed/unsigned mismatch
+  MergeMalagon.vcxproj -> c:\users\marcos\documents\visual studio 2017\Projects\MergeMalagon\Debug\MergeMalagon.exe
+  MergeMalagon.vcxproj -> c:\users\marcos\documents\visual studio 2017\Projects\MergeMalagon\Debug\MergeMalagon.pdb (Partial PDB)
