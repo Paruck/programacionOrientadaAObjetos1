@@ -40,7 +40,7 @@ int main()
         insert("g");
 	insert("h");
 	insert("i");
-
+	print();
 	system("PAUSE");
 	return 0;
 }
