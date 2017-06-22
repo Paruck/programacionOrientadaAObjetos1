@@ -1,49 +1,32 @@
 #include "Calendario.h"
 #include <iostream>
+#include <vector>
 
-
-void Calendario::Sumador(int dia, int mes, int año, long int segundos)
+void Calendario::Sumador(int dia, int mes, int aÃ±o, long int segundos, std::vector<int> FechaFinal)
 {
-	int mesFinal, mesInicial;
-	int añoInicial;
-	int contador;
-	int minutos = 0;
-	mesInicial = mes;
-	añoInicial = año;
-	contador = segundos/60;
-	segundos %=60;
+	minutos = 0;
+	horas = 0;
+	contador = segundos / 60;
+	segundos %= 60;
+	FechaFinal.push_back(segundos);
 	minutos += contador;
-	int horas = 0;
-	contador = minutos/60;
-	minutos%=60;
+	contador = minutos / 60;
+	minutos %= 60;
+	FechaFinal.push_back(minutos);
 	horas += contador;
 	contador = horas / 24;
 	horas %= 24;
+	FechaFinal.push_back(horas);
 	dia += contador;
 	contador = dia / 30;
 	dia %= 30;
+	FechaFinal.push_back(dia);
 	mes += contador;
 	contador = mes / 12;
 	mes %= 12;
-	año += contador;
-
-	mesFinal = mes;
-
-	if (mesFinal > mesInicial) {
-		contador = mesFinal - mesInicial;
-		contador /= 2;
-		dia -= contador;
-	}
-	else if(mesInicial> mesFinal)
-	{
-		contador = mesInicial - mesFinal;
-		contador /= 2;
-		dia -= contador;
-	}
-	else if (mesFinal == mesInicial && añoInicial != año) {
-		dia -= 5;
-	}
-	std::cout << dia << "/ " << mes << "/ " << año << " : " << horas << " : " << minutos << " : " << segundos << "\n";
+	FechaFinal.push_back(mes);
+	aÃ±o += contador;
+	FechaFinal.push_back(aÃ±o);
 }
 
 Calendario::Calendario()
