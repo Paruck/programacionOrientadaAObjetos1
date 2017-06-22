@@ -21,7 +21,7 @@ void DLList::insert(const int &v) {
 void DLList::deleteAll() {
 	if (_head == nullptr)
 		return;
-	Node *pTemp = _head->next;
+	Node *pTemp = _head;
 	while (_head)
 	{
 		_head = _head->next;
@@ -32,7 +32,7 @@ void DLList::deleteAll() {
 void DLList::print() {
 	if (_head == nullptr)
 		return;
-	Node *pTemp = _head->next;
+	Node *pTemp = _head;
 	while (_head)
 	{
 		_head = _head->next;
