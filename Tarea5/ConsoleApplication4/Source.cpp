@@ -17,8 +17,16 @@ void printNodes(const string &v) {
 	pTemp->value = v;
 	pTemp -> next = pHead;
 	pHead = pTemp;
-	//Asi, imprime todos los valores de los nodos en orden.
-	cout << pTemp->value << endl;
+}
+void print() {
+	if (pHead == nullptr)
+		return;
+	Node *pTemp = pHead;
+	while (pHead)
+	{
+		pHead = pHead->next;
+		std::cout<<pTemp->value;
+	}
 }
 
 int main()
