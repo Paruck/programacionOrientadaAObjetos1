@@ -40,7 +40,7 @@ void DLList::print() {
 	}
 }
 
-static void ShallowCopy(Node* const &valor1, Node* const &valor2){
+static void ShallowCopy(Node* &valor1, Node* const &valor2){
 	valor1 = valor2;
 }
 
