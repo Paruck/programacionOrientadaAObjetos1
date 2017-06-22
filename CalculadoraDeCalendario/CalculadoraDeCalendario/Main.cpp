@@ -7,13 +7,16 @@ void main() {
 	std::cin >> d;
 	std::cout << "Introduce El mes: ";
 	std::cin >> m;
-	std::cout << "Introduce El año: ";
+	std::cout << "Introduce El aÃ±o: ";
 	std::cin >> a;
 	std::cout << "Introduce los segundos que le quieres sumar a la fecha actual: ";
 	std::cin >> s;
+	std::vector <int> VectorFinal;
 	Calendario C;
-	C.Sumador(d,m,a,s);
-	
+	C.Sumador(d,m,a,s, VectorFinal);
+	for (int i = 0; i <= VectorFinal.size(); i++) {
+		std::cout << VectorFinal.at(i) << " / ";
+	}
 	system("Pause");
 }
 
@@ -41,12 +44,12 @@ segundos -= 2592000;
 }
 if (mes >= 12)
 {
-año++;
+aÃ±o++;
 segundos -= 31536000;
 }
 else {
 segundos = segundos;
 }
-std::cout << dia << "/ " << mes << "/ " << año << " : " << hora << " : " << minuto << " : " << segundos << "\n";
+std::cout << dia << "/ " << mes << "/ " << aÃ±o << " : " << hora << " : " << minuto << " : " << segundos << "\n";
 
 }*/
