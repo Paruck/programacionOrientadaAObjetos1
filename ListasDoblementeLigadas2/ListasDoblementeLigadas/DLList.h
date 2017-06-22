@@ -8,6 +8,6 @@ public:
 	void deleteAll();
 	void print();
 	//Metodo para Shallow copy
-	static void ShallowCopy(Node* const &a, Node* const &b);
+	static void ShallowCopy(Node* &a, Node* const &b);
 	DLList();
 };
