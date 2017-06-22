@@ -6,8 +6,6 @@ DLList::DLList():_head(nullptr),_tail(nullptr)
 void DLList::insert(const int &v) {
 	Node *nuevo = new Node();
 	nuevo->value = v;
-	//Shallow copy.
-	shallowCopy = nuevo->value;
 	std::cout << nuevo->value << "\n";
 	if (_head == nullptr){
 		_head = nuevo;
