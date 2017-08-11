@@ -23,15 +23,17 @@ void Application::draw()
 		y0 = 255,
 		x1 = 200,
 		y1 = 270;
-
-	/*for (int i = 360; i--;)
-	{
-		linea(x0, y0, (x1 * cos(i*(PI/180))) + x0, (x1 * sin(i*(PI / 180))) + y0);
-	}*/
-
+	
 	moveTo(255, 255);
 	setColor(255, 0, 0, 0);
-	circle( 100);
+	for (int i = 360; i--;)
+	{
+		linea(x0, y0, (x1 * cos(i*(PI/180))) + x0, (x1 * sin(i*(PI / 180))) + y0);
+	}
+
+	//moveTo(255, 255);
+	//setColor(255, 0, 0, 0);
+	//circle( 100);
 }
 
 void Application::linea(int x0, int y0,int x1, int y1)
