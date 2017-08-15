@@ -63,6 +63,8 @@ void Application::putPixel(int x, int y)
 void Application::lineTo(int x, int y)
 {
 	linea(cx, cy, x, y);
+	cx = x;
+	cy = y;
 
 }
 
