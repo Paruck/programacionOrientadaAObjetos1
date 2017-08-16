@@ -1,0 +1,10 @@
+﻿  sierpinsky.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(75): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(76): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(79): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(80): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(115): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(116): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\sierpinsky\sierpinsky.cpp(117): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Sierpinsky.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Sierpinsky.exe
+  Sierpinsky.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Sierpinsky.pdb (Partial PDB)
