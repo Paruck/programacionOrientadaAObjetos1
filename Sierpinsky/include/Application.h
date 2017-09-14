@@ -37,7 +37,7 @@ public:
 	void draw();
 	void linea(int x0, int y0,int x, int y);
 	void circle( int r);
-	void crearPoligonos(int lados);
+	void crearPoligonos(int lados, int radio);
 	vec2 puntoMedio(vec2 o, vec2 p);
 	void sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv);
 
