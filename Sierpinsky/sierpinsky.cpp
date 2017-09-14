@@ -4,7 +4,8 @@
 
 #define PI  3.1516
 
-std::vector<vec2> vertices;
+std::vector<vect3> vertices;
+std::vector<vect3> verticesT;
 
 int CreateHash(int dx, int dy)
 {
@@ -17,24 +18,23 @@ int CreateHash(int dx, int dy)
 
 void Application::crearPoligonos(int lados, int radio)
 {
-		int		angulo = 0;
+	int		angulo = 0;
 
 	int		incremento = 360 / lados;
 	vect3	mV;
 	mV.v[2] = 1;
 	for (int i = lados + 1; --i;) {
-	mV.v[0] = cx;
-	mV.v[1] = cy;
-	mV.v[0] += radio * cos(angulo * PI / 180);
-	mV.v[1] += radio * sin(angulo * PI / 180);
-	vertices.push_back(mV);
-	angulo += incremento;
+		mV.v[0] = cx;
+		mV.v[1] = cy;
+		mV.v[0] += radio * cos(angulo * PI / 180);
+		mV.v[1] += radio * sin(angulo * PI / 180);
+		vertices.push_back(mV);
+		angulo += incremento;
 	}
 }
 
-vec2 Application::puntoMedio(vec2 o, vec2 p)
+vect3 Application::puntoMedio(vect3 o, vect3 p)
 {
-	
 	vect3 result;
 	result.v[0] = (o.v[0] + p.v[0]) / 2;
 	result.v[1] = (o.v[1] + p.v[1]) / 2;
@@ -42,14 +42,9 @@ vec2 Application::puntoMedio(vec2 o, vec2 p)
 	return result;
 }
 
-void Application::sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv)
+void Application::sierpinskyAlgorithm(vect3 a, vect3 b, vect3 c, int subDiv)
 {
-		std::vector<vect3> v;
-	v.push_back(a);
-	v.push_back(b);
-	v.push_back(c);
 
-	vertices1.push_back(v);
 
 
 	if (subDiv > 0) {
@@ -66,10 +61,11 @@ void Application::sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv)
 		vertices.push_back(b);
 		vertices.push_back(c);
 	}
+
 }
 
-void Application::setUp() {
 
+void Application::setUp() {
 	moveTo(255, 255);
 	crearPoligonos(3, 50);
 	sierpinskyAlgorithm(vertices.at(0), vertices.at(1), vertices.at(2), 3);
@@ -78,38 +74,22 @@ void Application::setUp() {
 
 void Application::update()
 {
-
 }
 
 void Application::draw()
 {
-	//int x0 = 255,
-	//	y0 = 255,
-	//	x1 = 200,
-	//	y1 = 270;
-	//int numRand = rand();
-	//moveTo(255, 255);
-	//setColor(0, 255, 0,0);
-	///*lineTo(500, 0);*/
-	//for (int i = 360; i--;)
-	//{
-	//	setColor(0, 255, 255, 0);
-	//	linea(x0, y0, (x1 * cos(i*(PI / 180))) + x0, (x1 * sin(i*(PI / 180))) + y0);
-	//}
-
-	//moveTo(255, 255);
-	//setColor(0, 255, 255, 0);
-	//circle( 100);
-
+	
 	setColor(0, 255, 132, 0);
-	for (int i = 0; i < verticesT.size(); i += 3) {
+	clearScreen();
+	for (int i = 0; i < vertices.size(); i += 3) {
 		moveTo(vertices[i].v[0], vertices[i].v[1]);
-		lineTo(vertices[i+1].v[0], vertices[i+1].v[1]);
-		moveTo(vertices[i+1].v[0], vertices[i+1].v[1]);
-		lineTo(vertices[i+2].v[0], vertices[i+2].v[1]);
-		moveTo(vertices[i+2].v[0], vertices[i+2].v[1]);
+		lineTo(vertices[i + 1].v[0], vertices[i + 1].v[1]);
+		moveTo(vertices[i + 1].v[0], vertices[i + 1].v[1]);
+		lineTo(vertices[i + 2].v[0], vertices[i + 2].v[1]);
+		moveTo(vertices[i + 2].v[0], vertices[i + 2].v[1]);
 		lineTo(vertices[i].v[0], vertices[i].v[1]);
-		}
+	}
+
 }
 
 void Application::linea(int x0, int y0, int x1, int y1)
@@ -129,7 +109,7 @@ void Application::linea(int x0, int y0, int x1, int y1)
 		int E = 2 * (dy),
 			nE = 2 * (dy - dx),
 			d = 2 * dy - dx;//0
-		while (x != x1) {
+		while (x <= x1) {
 			(d > 0) ? y++, d += nE : d += E;
 			putPixel(x, y, R, G, B, A);
 			++x;
