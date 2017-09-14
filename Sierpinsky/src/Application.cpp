@@ -279,6 +279,18 @@ void Application::keyboard(int key, int scancode, int action, int mods)
 						glPolygonMode(GL_BACK, GL_LINE);
 						break;
 			}
+		case GLFW_KEY_LEFT:
+			mtrx.m[0][2] -= 3;
+			break;
+		case GLFW_KEY_RIGHT:
+			mtrx.m[0][2] += 3;
+			break;
+		case GLFW_KEY_UP:
+			mtrx.m[1][2] -= 3;
+			break;
+		case GLFW_KEY_DOWN:
+			mtrx.m[1][2] += 3;
+			break;
 		}
 		//break;
 		
@@ -344,3 +356,58 @@ void Application::putPixel(int x, int y, unsigned char R, unsigned char G, unsig
 
 
 ///////////////////////////////////////////////////////////////////////
+/*
+00 01 02
+10 11 12
+20 21 22
+*/
+
+Mat3 Mat3:: operator*(const Mat3 &m1)
+{
+	Mat3 matFinal;
+	matFinal.m[0][0] = this->m[0][0] * m1.m[0][0] + (this->m[0][1] * m1.m[1][0] + (this->m[0][2] * m1.m[2][0]));
+	matFinal.m[0][1] = this->m[0][0] * m1.m[0][1] + (this->m[0][1] * m1.m[1][1] + (this->m[0][2] * m1.m[2][1]));
+	matFinal.m[0][2] = this->m[0][0] * m1.m[0][2] + (this->m[0][1] * m1.m[1][2] + (this->m[0][2] * m1.m[2][2]));
+
+	matFinal.m[1][0] = this->m[1][0] * m1.m[0][0] + (this->m[1][1] * m1.m[1][0] + (this->m[1][2] * m1.m[2][0]));
+	matFinal.m[1][1] = this->m[1][0] * m1.m[0][1] + (this->m[1][1] * m1.m[1][1] + (this->m[1][2] * m1.m[2][1]));
+	matFinal.m[1][2] = this->m[1][0] * m1.m[0][2] + (this->m[1][1] * m1.m[1][2] + (this->m[1][2] * m1.m[2][2]));
+
+	matFinal.m[2][0] = this->m[2][0] * m1.m[0][0] + (this->m[2][1] * m1.m[1][0] + (this->m[2][2] * m1.m[2][0]));
+	matFinal.m[2][1] = this->m[2][0] * m1.m[0][1] + (this->m[2][1] * m1.m[1][1] + (this->m[2][2] * m1.m[2][1]));
+	matFinal.m[2][2] = this->m[2][0] * m1.m[0][2] + (this->m[2][1] * m1.m[1][2] + (this->m[2][2] * m1.m[2][2]));
+
+	return matFinal;
+}
+
+vect3 Mat3::multi(const vect3 & v1, const Mat3 & m2)
+{
+	vect3 vectorFinal;
+	vectorFinal.v[0] = v1.v[0] * m2.m[0][0] + (v1.v[1] * m2.m[0][1] + (v1.v[2] * m2.m[0][2]));
+	vectorFinal.v[1] = v1.v[0] * m2.m[1][0] + (v1.v[1] * m2.m[1][1] + (v1.v[2] * m2.m[1][2]));
+	vectorFinal.v[2] = v1.v[0] * m2.m[2][0] + (v1.v[1] * m2.m[2][1] + (v1.v[2] * m2.m[2][2]));
+	return vectorFinal;
+}
+
+
+//vect3 vect3:: operator*(const Mat3 &m2)
+//{
+//	vect3 vectorFinal;
+//	vectorFinal.v[0] = this->v[0] * m2.m[0][0] + (this->v[1] * m2.m[0][1] + (this->v[2] * m2.m[0][2]));
+//	vectorFinal.v[1] = this->v[0] * m2.m[1][0] + (this->v[1] * m2.m[1][1] + (this->v[2] * m2.m[1][2]));
+//	vectorFinal.v[2] = this->v[0] * m2.m[2][0] + (this->v[1] * m2.m[2][1] + (this->v[2] * m2.m[2][2]));
+//
+//	return vectorFinal;
+//}
+
+vect3::vect3(int x, int y, int z)
+{
+	v[0] = x;
+	v[1] = y;
+	v[2] = z;
+}
+
+vect3::vect3()
+{
+
+}
