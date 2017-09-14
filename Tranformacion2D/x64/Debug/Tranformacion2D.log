@@ -1,0 +1,9 @@
+﻿  Application.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(78): warning C4101: 'channels': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(77): warning C4101: 'img_height': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(77): warning C4101: 'img_width': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(405): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(406): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(407): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  Tranformacion2D.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Tranformacion2D.exe
+  Tranformacion2D.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Tranformacion2D.pdb (Partial PDB)

@@ -1,0 +1,11 @@
+﻿  Transf2D.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\transf2d.cpp(1): fatal error C1083: No se puede abrir el archivo incluir: 'Application.h': No such file or directory
+  ShaderFuncs.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\shaderfuncs.cpp(2): fatal error C1083: No se puede abrir el archivo incluir: 'ShaderFuncs.h': No such file or directory
+  Plane.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\plane.cpp(3): fatal error C1083: No se puede abrir el archivo incluir: 'Plane.h': No such file or directory
+  Pixel.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\pixel.cpp(7): fatal error C1083: No se puede abrir el archivo incluir: 'GL/glew.h': No such file or directory
+  Application.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\tranformacion2d\src\application.cpp(11): fatal error C1083: No se puede abrir el archivo incluir: 'Application.h': No such file or directory
+  Generando código...
