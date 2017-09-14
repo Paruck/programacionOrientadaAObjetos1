@@ -15,40 +15,47 @@ int CreateHash(int dx, int dy)
 	return ret;
 }
 
-void Application::crearPoligonos(int lados)
+void Application::crearPoligonos(int lados, int radio)
 {
-	/*int		angulo = 0,
-			radio = 50;
+		int		angulo = 0;
 
 	int		incremento = 360 / lados;
-	vec2	mV;
-
-	moveTo(255, 255);
-	mV.x = cx;
-	mV.y = cy;
+	vect3	mV;
+	mV.v[2] = 1;
 	for (int i = lados + 1; --i;) {
-
-		mV.x += radio * cos(angulo * PI / 180);
-		mV.y += radio * sin(angulo * PI / 180);
-		vertices.push_back(mV);
-		angulo += incremento;
-	}*/
+	mV.v[0] = cx;
+	mV.v[1] = cy;
+	mV.v[0] += radio * cos(angulo * PI / 180);
+	mV.v[1] += radio * sin(angulo * PI / 180);
+	vertices.push_back(mV);
+	angulo += incremento;
+	}
 }
 
 vec2 Application::puntoMedio(vec2 o, vec2 p)
 {
-	vec2 result;
-	result.x = (o.x + p.x) / 2;
-	result.y = (o.y + p.y) / 2;
+	
+	vect3 result;
+	result.v[0] = (o.v[0] + p.v[0]) / 2;
+	result.v[1] = (o.v[1] + p.v[1]) / 2;
+	result.v[2] = 1;
 	return result;
 }
 
 void Application::sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv)
 {
+		std::vector<vect3> v;
+	v.push_back(a);
+	v.push_back(b);
+	v.push_back(c);
+
+	vertices1.push_back(v);
+
+
 	if (subDiv > 0) {
-		vec2 ab = puntoMedio(a, b),
-			 bc = puntoMedio(b, c),
-			 ca = puntoMedio(c, a);
+		vect3 ab = puntoMedio(a, b),
+			bc = puntoMedio(b, c),
+			ca = puntoMedio(c, a);
 
 		sierpinskyAlgorithm(a, ab, ca, subDiv - 1);
 		sierpinskyAlgorithm(ab, b, bc, subDiv - 1);
@@ -63,26 +70,9 @@ void Application::sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv)
 
 void Application::setUp() {
 
-	int		lados = 3,
-			angulo = 0,
-			radio = 150;
-
-	int		incremento = 360 / lados;
-	vec2	mV;
-
-
 	moveTo(255, 255);
-	mV.x = cx;
-	mV.y = cy;
-	for (int i = lados + 1; --i;) {
-
-		mV.x += radio * cos(angulo * PI / 180);
-		mV.y += radio * sin(angulo * PI / 180);
-		vertices.push_back(mV);
-		angulo += incremento;
-	}
-
-	sierpinskyAlgorithm(vertices.at(0), vertices.at(1), vertices.at(2), 5);
+	crearPoligonos(3, 50);
+	sierpinskyAlgorithm(vertices.at(0), vertices.at(1), vertices.at(2), 3);
 
 }
 
@@ -112,11 +102,14 @@ void Application::draw()
 	//circle( 100);
 
 	setColor(0, 255, 132, 0);
-	for (int i = vertices.size(); --i;) {
-		lineTo(vertices[i].x, vertices[i].y);
-		moveTo(vertices[i].x, vertices[i].y);
-	}
-
+	for (int i = 0; i < verticesT.size(); i += 3) {
+		moveTo(vertices[i].v[0], vertices[i].v[1]);
+		lineTo(vertices[i+1].v[0], vertices[i+1].v[1]);
+		moveTo(vertices[i+1].v[0], vertices[i+1].v[1]);
+		lineTo(vertices[i+2].v[0], vertices[i+2].v[1]);
+		moveTo(vertices[i+2].v[0], vertices[i+2].v[1]);
+		lineTo(vertices[i].v[0], vertices[i].v[1]);
+		}
 }
 
 void Application::linea(int x0, int y0, int x1, int y1)
