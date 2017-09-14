@@ -13,6 +13,26 @@ public:
 			y;
 };
 
+class vect3 {
+public:
+	float 	v[3];
+	/*vect3 operator*(const Mat3& m2);*/
+	vect3(int x, int y, int z = 1);
+	vect3();
+
+};
+
+class Mat3 {
+public:
+	float m[3][3];
+	Mat3 operator*(const Mat3  &m);
+	vect3 multi(const vect3& v1, const Mat3& m2);
+	Mat3 Translate(const float& x, const float &y);
+	Mat3 scale(const float &x, const float &y);
+
+
+};
+
 class Application {
 public:
 
@@ -38,9 +58,15 @@ public:
 	void linea(int x0, int y0,int x, int y);
 	void circle( int r);
 	void crearPoligonos(int lados, int radio);
-	vec2 puntoMedio(vec2 o, vec2 p);
-	void sierpinskyAlgorithm(vec2 a, vec2 b, vec2 c, int subDiv);
+	vect3 puntoMedio(vect3 o, vect3 p);
+	void sierpinskyAlgorithm(vect3 a, vect3 b, vect3 c, int subDiv);
+	static Mat3 Rotation(const float& angulo);
+	static Mat3 Translation(const float &x,const float &y);
 
+	Mat3 mtrx;
+	Mat3 RotateMatrix;
+	vect3 v1;
+	vect3 vecTrans;
 	std::stack<glm::mat4> mStack;
 	glm::mat4 mProjectionMatrix, mTransform;
 	glm::vec3 vEye;
@@ -64,7 +90,12 @@ private:
 		_nextBuffer;
 
 	int cx, cy;
+	float x = 0;
+	float y = 0;
 	int	R, G, B, A;
+	float angulo = 0, rad = 0;
+	Mat3 TransMatrxi;
+	Mat3 Final;
 
 	glm::vec3 myLightPosition;
 	GLuint uMyLightPosition[2];	
