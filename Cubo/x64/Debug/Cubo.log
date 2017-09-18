@@ -1,0 +1,22 @@
+﻿  Cube.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(31): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(191): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(192): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(193): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(194): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(195): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(196): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(197): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(198): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(221): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(403): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(404): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(405): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(406): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(407): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(408): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(409): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubo\cube.cpp(410): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Cubo.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Cubo.exe
+  Cubo.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\Cubo.pdb (Partial PDB)
