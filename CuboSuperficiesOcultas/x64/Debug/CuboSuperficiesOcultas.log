@@ -1,0 +1,113 @@
+﻿  ShaderFuncs.cpp
+  Plane.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\plane.cpp(35): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\plane.cpp(36): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\plane.cpp(44): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\plane.cpp(45): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\plane.cpp(127): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Pixel.cpp
+  Application.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(48): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(49): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(50): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(51): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(53): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(56): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(57): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(58): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(59): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(60): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(61): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(66): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(67): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(68): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(69): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(70): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(71): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(74): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(75): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(76): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(77): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(78): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(79): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(83): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(84): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(85): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(86): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(87): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(88): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(92): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(93): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(94): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(95): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(96): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(97): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(102): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(103): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(104): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(105): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(106): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(107): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(111): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(112): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(113): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(114): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(115): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(116): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(121): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(122): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(123): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(124): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(125): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(126): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(130): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(131): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(132): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(133): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(134): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(135): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(141): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(142): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(143): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(144): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(145): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(146): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(150): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(151): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(152): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(153): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(154): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(155): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(172): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(173): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(183): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(196): warning C4101: 'channels': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(195): warning C4101: 'img_height': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(195): warning C4101: 'img_width': variable local sin referencia
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(523): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(524): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\src\application.cpp(525): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  CuboSupOcultas.cpp
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(30): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(31): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(191): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(192): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(193): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(194): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(195): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(196): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(197): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(198): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(229): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(411): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(412): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(413): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(414): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(415): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(416): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(417): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\emi_s_000\desktop\desarrollo\grafico\principiosdecg\cubosuperficiesocultas\cubosupocultas.cpp(418): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
+  CuboSuperficiesOcultas.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\CuboSuperficiesOcultas.exe
+  CuboSuperficiesOcultas.vcxproj -> C:\Users\emi_s_000\Desktop\Desarrollo\Grafico\PrincipiosDeCG\x64\Debug\CuboSuperficiesOcultas.pdb (Partial PDB)
