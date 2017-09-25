@@ -251,11 +251,16 @@ Mat4 Application::LookAt(vect4 eye, vect4 target, vect4 up)
 	vect4 ejez = Normalize(rest);
 	vect4 ejex = Normalize(Cross(ejez, up));
 	vect4 ejey = Normalize(Cross(ejex, ejez));
-	Mat4 RotY = RotationY(rad);
+	//Mat4 RotY = RotationY(rad); esto no va
+	Mat4 rot;
+	rot.m[0][0] = ejex.v[0];  rot.m[0][1] = ejex.v[1];   rot.m[0][2] = ejex.v[2];   rot.m[0][3] = 0;  //renglon 1
+	rot.m[1][0] = ejey.v[0];  rot.m[1][1] = ejey.v[1];   rot.m[1][2] = ejey.v[2];   rot.m[1][3] = 0;  //renglon 2
+	rot.m[2][0] = ejez.v[0];  rot.m[2][1] = ejez.v[1];   rot.m[2][2] = ejez.v[2];   rot.m[2][3] = 0;  //renglon 4
+	rot.m[3][0] = 0;		rot.m[3][1] = 0;   rot.m[3][2] = 0;   rot.m[3][3] = 1;  //renglon 4
 
 
 	Mat4 translate = Traslacion(-eye.v[0], -eye.v[1], -eye.v[2]);
-	return translate * RotY;
+	return translate * rot;
 }
 
 vect4 Application::Resta(const vect4 & v1, const vect4 & v2)
@@ -265,6 +270,49 @@ vect4 Application::Resta(const vect4 & v1, const vect4 & v2)
 	vecRes.v[1] = v1.v[1] - (v2.v[1]);
 	vecRes.v[2] = v1.v[2] - (v2.v[2]);
 	return vecRes;
+}
+Mat4 Application::Perspectiva(float fovyInDegrees, float aspectRatio, float znear, float zfar)
+{
+	float ymax, xmax;
+	float temp, temp2, temp3, temp4;
+	ymax = znear * tanf(fovyInDegrees *PI / 360.0);
+	//ymin = -ymax;
+	//xmin = -ymax * aspectRatio;
+	xmax = ymax * aspectRatio;
+	Mat4 m = glhFrustumf2(-xmax, xmax, -ymax, ymax, znear, zfar);
+	return m;
+}
+
+Mat4 Application::glhFrustumf2(float left, float right, float bottom, float top, float znear, float zfar)
+{
+	Mat4 matrix;
+	float temp, temp2, temp3, temp4;
+	temp = 2.0 * znear;
+	temp2 = right - left;
+	temp3 = top - bottom;
+	temp4 = zfar - znear;
+	matrix.m[0][0] = temp / temp2;
+	matrix.m[0][1] = 0.0;
+	matrix.m[0][2] = 0.0;
+	matrix.m[0][3] = 0.0;
+
+
+	matrix.m[1][0] = 0.0;
+	matrix.m[1][1] = temp / temp3;
+	matrix.m[1][2] = 0.0;
+	matrix.m[1][3] = 0.0;
+
+
+	matrix.m[2][0] = (right + left) / temp2;
+	matrix.m[2][1] = (top + bottom) / temp3;
+	matrix.m[2][2] = (-zfar - znear) / temp4;
+	matrix.m[2][3] = -1.0;
+
+	matrix.m[3][0] = 0.0;
+	matrix.m[3][1] = 0.0;
+	matrix.m[3][2] = (-temp * zfar) / temp4;
+	matrix.m[3][3] = 0.0;
+	return matrix;
 }
 
 //Mat4 Application::LookAtRh(vect3 eye, vect3 target, vect3 up)
@@ -282,6 +330,7 @@ void Application::setUp() {
 
 void Application::update()
 {
+	
 	float contador = 1.0f;
 	x += contador;
 	angulo = 0;
@@ -300,8 +349,8 @@ void Application::update()
 	Mat4 RotX = RotationX(rad);
 	Mat4 RotY = RotationY(rad);
 	Mat4 RotZ = RotationZ(rad);
-
-
+	//(float fovyInDegrees, float aspectRatio, float znear, float zfar)
+	Mat4 perspectiva = Perspectiva(45, WIDTH/HEIGHT, 1, 100); //esto esta mal
 
 	Mat4 m1;
 	vect4 v2;
@@ -309,8 +358,11 @@ void Application::update()
 	Trans1 = Traslacion(-255, -255, 1);
 	Trans2 = Traslacion(255, 255, 1);
 	Trans3 = Traslacion(170, 170, 1);
-	Mat4 Look = LookAt(vertices1.at(0), vertices1.at(1), vertices1.at(2));
-	Mat4 Final1 = Trans2* Trans3* Look*RotY*RotZ*Trans1;
+	//Aqui los parametros deben ser Ojo, Target, Up
+	Mat4 Look = LookAt(vect4(15.0, 15.0, 15.0), vect4(0.0, 0.0, 0.0), vect4(0.0, 1.0, 0.0)); //Solo recibe 3 
+	//Mat4 Look = LookAt(vertices1.at(0), vertices1.at(1), vertices1.at(2)); //esto esta mal. 
+	//Mat4 Final1 =Trans2* Trans3* perspectiva *Look*RotY*RotZ*Trans1; //esto tambien esta mal. Tendria que ser algo como :
+	Mat4 Final1 = perspectiva *Look*RotY*RotX * Trans1;
 	verticesF.clear();
 	for (vect4 &v : vertices1) {
 		v2 = m1.multiP(v, Final1);
