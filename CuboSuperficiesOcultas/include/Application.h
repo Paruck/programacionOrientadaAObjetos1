@@ -7,6 +7,7 @@
 #include <stack>
 #include "GLFW\glfw3.h"
 #include <vector>
+#include <math.h>
 
 class vec2{
 public:
@@ -26,7 +27,6 @@ public:
 class vect4 {
 public:
 	float v[4];
-
 	vect4(float x, float y, float z);
 	vect4();
 };
@@ -74,12 +74,20 @@ public:
 	void sierpinskyAlgorithm(vect3 a, vect3 b, vect3 c, int subDiv);
 	static Mat3 Rotation(const float& angulo);
 	static Mat3 Translation(const float &x, const float &y);
+	static Mat4 Traslacion(const float &x, const float &y, const float & z);
 	static Mat4 RotationX(const float & angulo);
 	static Mat4 RotationY(const float & angulo);
 	static Mat4 RotationZ(const float & angulo);
 	std::vector<vect4> crearCubo();
-	Mat4 LookAtRh(vect3 eye, vect3 target, vect3 up);
+	vect4 Normalize(const vect4 &v);
+	Mat4 LookAt(vect4 eye, vect4 target, vect4 up);
+	vect4 Resta(const vect4 &v1, const vect4 &v2);
+	Mat4 Perspectiva(float fovyInDegrees, float aspectRatio,
+		float znear, float zfar);
+	Mat4 glhFrustumf2(float left, float right, float bottom, float top,
+		float znear, float zfar);
 
+	int Point(vect4 &v1, vect4 &v2);
 
 	Mat3 mtrx;
 	Mat3 RotateMatrix;
@@ -117,7 +125,10 @@ private:
 	Mat3 Final;
 	std::vector<vect4> vertices1;
 	std::vector<vect4> verticesF;
+	std::vector<vect4> verticesN;
 
+	vect4 eye, target, up;
+	vect4 Cross(const vect4 &v1, const vect4 &v2 );
 	glm::vec3 myLightPosition;
 	GLuint uMyLightPosition[2];	
 
