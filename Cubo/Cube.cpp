@@ -106,6 +106,33 @@ Mat3 Application::Translation(const float &x, const float & y)
 	return matrizTras;
 }
 
+Mat4 Application::Traslacion(const float & x, const float & y, const float & z)
+{
+	Mat4 matrizTras;
+	matrizTras.m[0][0] = 1;
+	matrizTras.m[0][1] = 0;
+	matrizTras.m[0][2] = 0;
+	matrizTras.m[0][3] = x;
+
+	matrizTras.m[1][0] = 0;
+	matrizTras.m[1][1] = 1;
+	matrizTras.m[1][2] = 0;
+	matrizTras.m[1][3] = y;
+
+	matrizTras.m[2][0] = 0;
+	matrizTras.m[2][1] = 0;
+	matrizTras.m[2][2] = 1;
+	matrizTras.m[2][3] = z;
+
+	matrizTras.m[3][0] = 0;
+	matrizTras.m[3][1] = 0;
+	matrizTras.m[3][2] = 0;
+	matrizTras.m[3][3] = 1;
+
+
+	return matrizTras;
+}
+
 Mat4 Application::RotationX(const float & angulo)
 {
 	Mat4 matrizAngulo;
@@ -207,6 +234,47 @@ std::vector<vect4> Application::crearCubo()
 	return vertices1;
 }
 
+vect4 Application::Normalize(const vect4 & v)
+{
+	float distance = sqrt((v.v[0] * v.v[0]) +
+		(v.v[1] * v.v[1]) +
+		(v.v[2] * v.v[2]));
+	if (distance != 0)
+		return vect4(v.v[0] / distance, v.v[1] / distance, v.v[2] / distance);
+	else
+		return v;
+}
+
+Mat4 Application::LookAt(vect4 eye, vect4 target, vect4 up)
+{
+	vect4 rest = Resta(target, eye);
+	vect4 ejez = Normalize(rest);
+	vect4 ejex = Normalize(Cross(ejez, up));
+	vect4 ejey = Normalize(Cross(ejex, ejez));
+	Mat4 RotY = RotationY(rad);
+
+
+	Mat4 translate = Traslacion(-eye.v[0], -eye.v[1], -eye.v[2]);
+	return translate * RotY;
+}
+
+vect4 Application::Resta(const vect4 & v1, const vect4 & v2)
+{
+	vect4 vecRes;
+	vecRes.v[0] = v1.v[0] - (v2.v[0]);
+	vecRes.v[1] = v1.v[1] - (v2.v[1]);
+	vecRes.v[2] = v1.v[2] - (v2.v[2]);
+	return vecRes;
+}
+
+//Mat4 Application::LookAtRh(vect3 eye, vect3 target, vect3 up)
+//{
+//	/*vect3 zaxis = normal(eye - target);
+//	vect3 xaxis = normal(cross(up, zaxis)); 
+//	vect3 yaxis = cross(zaxis, xaxis);
+//	return Mat4();*/
+//}
+
 void Application::setUp() {
 	moveTo(255, 255);
 	vertices1 = crearCubo();
@@ -225,7 +293,6 @@ void Application::update()
 	RotateMatrix = Rotation(rad);
 	TransMatrxi = Translation(y, x);
 	Final = mtrx * trans2 * RotateMatrix * trans1;
-	verticesT.clear();
 	/*for (vect3 &v : vertices) {
 		v1 = mtrx.multi(v, Final);
 		verticesT.push_back(v1);
@@ -234,16 +301,22 @@ void Application::update()
 	Mat4 RotY = RotationY(rad);
 	Mat4 RotZ = RotationZ(rad);
 
-	Mat4 Final1 = RotY;
+
 
 	Mat4 m1;
 	vect4 v2;
-
+	Mat4 Trans1, Trans2,Trans3;
+	Trans1 = Traslacion(-255, -255, 1);
+	Trans2 = Traslacion(255, 255, 1);
+	Trans3 = Traslacion(170, 170, 1);
+	Mat4 Look = LookAt(vertices1.at(0), vertices1.at(1), vertices1.at(2));
+	Mat4 Final1 = Trans2* Trans3* Look*RotY*RotZ*Trans1;
 	verticesF.clear();
 	for (vect4 &v : vertices1) {
 		v2 = m1.multiP(v, Final1);
 		verticesF.push_back(v2);
 	}
+
 }
 
 void Application::draw()
