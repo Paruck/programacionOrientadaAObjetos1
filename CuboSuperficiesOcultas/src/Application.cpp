@@ -44,119 +44,145 @@ Application::~Application()
 void Application::FUNCIONCHINGONA()
 {
 
-	//INDICES 1 Primer cuadrado FRONT------------------------------
-	moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]); // b
-	lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);// d
-	moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]); //d
-	lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
-	moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
-	lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	//END DE INDICES 1
+	vect4 n = Normalize(verticesF.at(0));
+	int a = Point(n, eye);
 
-	moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]); // b
-	lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
-	moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
-	lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	 //Fin de FRONT
+	vect4 n1 = Normalize(verticesF.at(1));
+	int b = Point(n1, eye); 
 
+	vect4 n2 = Normalize(verticesF.at(2));
+	int c = Point(n2, eye);
 
-	 //INDICES 2 Segundo cuadrado FRONT------------------------------
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // f
-	lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);// a
-	moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); //a
-	lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//e
-	moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//e
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//f
-    //END DE INDICES 2
+	vect4 n3 = Normalize(verticesF.at(3));
+	int d = Point(n3, eye);
 
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // f
-	lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
-	moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//f
-	 //Fin de BOT
+	vect4 n4 = Normalize(verticesF.at(4));
+	int e = Point(n4, eye);
 
-	 //INDICES 3 Tercer cuadrado Left------------------------------
-	moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); // a
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);// k
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); //k
-	lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//l
-	moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//l
-	lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+	vect4 n5 = Normalize(verticesF.at(5));
+	int f = Point(n5, eye);
+
+	vect4 n6 = Normalize(verticesF.at(6));
+	int g = Point(n6, eye);
+
+	vect4 n7 = Normalize(verticesF.at(7));
+	int h = Point(n7, eye);
+
+	if (a <= 0 && b <= 0 && d <= 0) {
+		//INDICES 1 Primer cuadrado FRONT------------------------------
+		moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]); // b
+		lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);// d
+		moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]); //d
+		lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+		moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+		lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		//END DE INDICES 1
+
+		moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]); // b
+		lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		 //Fin de FRONT
+	}
+
+	else if (a <= 0 && f <= 0 && e <= 0 && b <= 0) {
+		//INDICES 2 Segundo cuadrado FRONT------------------------------
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // f
+		lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);// a
+		moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); //a
+		lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//e
+		moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//e
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//f
+		//END DE INDICES 2
+
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // f
+		lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+		moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//f
+		 //Fin de BOT
 	
-	//END DE INDICES 3
+		//INDICES 3 Tercer cuadrado Left------------------------------
+		moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); // a
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);// k
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); //k
+		lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//l
+		moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//l
+		lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
 
-	moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); // a
-	lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//k
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//k
-	lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
-	 //Fin de Left
+		//END DE INDICES 3
 
+		moveTo(verticesF.at(0).v[0], verticesF.at(0).v[1]); // a
+		lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//k
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//k
+		lineTo(verticesF.at(0).v[0], verticesF.at(0).v[1]);//a
+		 //Fin de Left
 
-	 //INDICES 4 Cuarto cuadrado Right------------------------------
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // j
-	lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);// c
-	moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); //c
-	lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//j
-													   
-    //END DE INDICES 4
+	}
 
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // j
-	lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//i
-	moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//i
-	lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
-	moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//j
-	//Fin de Right
+	else if (b <= 0 && f <= 0 && c <= 0 && g <= 0) {
+		//INDICES 4 Cuarto cuadrado Right------------------------------
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // j
+		lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);// c
+		moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); //c
+		lineTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		moveTo(verticesF.at(1).v[0], verticesF.at(1).v[1]);//b
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//j
 
+		//END DE INDICES 4
 
-	//INDICES 5 Cuarto cuadrado Top------------------------------
-	moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); // c
-	lineTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);// h
-	moveTo(verticesF.at(7).v[0], verticesF.at(7).v[1]); //h
-	lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
-	lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]); // j
+		lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//i
+		moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//i
+		lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//j
+		//Fin de Right
+	}
 
-	 //END DE INDICES 5
+	else if (c <= 0 && h <= 0 && d <= 0 && g <= 0) {
+		//INDICES 5 Cuarto cuadrado Top------------------------------
+		moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); // c
+		lineTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);// h
+		moveTo(verticesF.at(7).v[0], verticesF.at(7).v[1]); //h
+		lineTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		moveTo(verticesF.at(3).v[0], verticesF.at(3).v[1]);//d
+		lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
 
-	moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); // c
-	lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
-	moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
-	lineTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);//h
-	moveTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);//h
-	lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
+		 //END DE INDICES 5
 
-	//Fin de Top
+		moveTo(verticesF.at(2).v[0], verticesF.at(2).v[1]); // c
+		lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
+		moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
+		lineTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);//h
+		moveTo(verticesF.at(7).v[0], verticesF.at(7).v[1]);//h
+		lineTo(verticesF.at(2).v[0], verticesF.at(2).v[1]);//c
 
+		//Fin de Top
 
-	//INDICES 6 Cuarto cuadrado Back------------------------------
-	moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]); // g
-	lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);// m
-	moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]); //m
-	lineTo(verticesF.at(7).v[0], verticesF.at(3).v[1]);//h
-	moveTo(verticesF.at(7).v[0], verticesF.at(3).v[1]);//h
-	lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
+		//INDICES 6 Cuarto cuadrado Back------------------------------
+		moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]); // g
+		lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);// m
+		moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]); //m
+		lineTo(verticesF.at(7).v[0], verticesF.at(3).v[1]);//h
+		moveTo(verticesF.at(7).v[0], verticesF.at(3).v[1]);//h
+		lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
 
-     //END DE INDICES 6
+		 //END DE INDICES 6
 
-	moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]); // g
-	lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//n
-	moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//n
-	lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//m
-	moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//m
-	lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
-
-	 //Fin de Back
-
-
+		moveTo(verticesF.at(6).v[0], verticesF.at(6).v[1]); // g
+		lineTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//n
+		moveTo(verticesF.at(5).v[0], verticesF.at(5).v[1]);//n
+		lineTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//m
+		moveTo(verticesF.at(4).v[0], verticesF.at(4).v[1]);//m
+		lineTo(verticesF.at(6).v[0], verticesF.at(6).v[1]);//g
+	}
+		 //Fin de Back
 }
 
 void Application::setColor(int r, int g, int b, int a)
@@ -188,6 +214,16 @@ void Application::clearScreen()
 {
 	for (int i = 0; i < WIDTH * HEIGHT * RGBA; i++)
 		_screenBuffer[i] = 0;
+}
+
+vect4 Application::Cross(const vect4 & v1, const vect4 & v2)
+{
+	vect4 vectorResultante;
+	vectorResultante.v[0] = v1.v[1] * v2.v[2] - v1.v[2] * v2.v[0];
+	vectorResultante.v[1] = (v1.v[0] * v2.v[2] - v1.v[2] * v2.v[2]) * -1;
+	vectorResultante.v[2] = v1.v[0] * v2.v[1] - v2.v[0] * v1.v[1];
+
+	return vectorResultante;
 }
 
 void Application::initTextures()
@@ -530,6 +566,7 @@ vect3::vect3()
 
 }
 
+
 vect4::vect4(float x, float y, float z)
 {
 	v[0] = x;
@@ -545,25 +582,25 @@ vect4::vect4()
 Mat4 Mat4::operator*(const Mat4 & m1)
 {
 	Mat4 matFinal;
-	matFinal.m[0][0] = this->m[0][0] * m1.m[0][0] + (this->m[0][1] * m1.m[1][0] + (this->m[0][2] * m1.m[2][0]));
-	matFinal.m[0][1] = this->m[0][0] * m1.m[0][1] + (this->m[0][1] * m1.m[1][1] + (this->m[0][2] * m1.m[2][1]));
-	matFinal.m[0][2] = this->m[0][0] * m1.m[0][2] + (this->m[0][1] * m1.m[1][2] + (this->m[0][2] * m1.m[2][2]));
-	matFinal.m[0][2] = this->m[0][0] * m1.m[0][3] + (this->m[0][1] * m1.m[1][3] + (this->m[0][2] * m1.m[2][3]));
+	matFinal.m[0][0] = this->m[0][0] * m1.m[0][0] + (this->m[0][1] * m1.m[1][0] + (this->m[0][2] * m1.m[2][0] + (this->m[0][3] * m1.m[3][0])));
+	matFinal.m[0][1] = this->m[0][0] * m1.m[0][1] + (this->m[0][1] * m1.m[1][1] + (this->m[0][2] * m1.m[2][1] + (this->m[0][3] * m1.m[3][1])));
+	matFinal.m[0][2] = this->m[0][0] * m1.m[0][2] + (this->m[0][1] * m1.m[1][2] + (this->m[0][2] * m1.m[2][2] + (this->m[0][3] * m1.m[3][2])));
+	matFinal.m[0][3] = this->m[0][0] * m1.m[0][3] + (this->m[0][1] * m1.m[1][3] + (this->m[0][2] * m1.m[2][3] + (this->m[0][3] * m1.m[3][3])));
 
-	matFinal.m[1][0] = this->m[1][0] * m1.m[0][0] + (this->m[1][1] * m1.m[1][0] + (this->m[1][2] * m1.m[2][0]));
-	matFinal.m[1][1] = this->m[1][0] * m1.m[0][1] + (this->m[1][1] * m1.m[1][1] + (this->m[1][2] * m1.m[2][1]));
-	matFinal.m[1][2] = this->m[1][0] * m1.m[0][2] + (this->m[1][1] * m1.m[1][2] + (this->m[1][2] * m1.m[2][2]));
-	matFinal.m[1][3] = this->m[1][0] * m1.m[0][3] + (this->m[1][1] * m1.m[1][3] + (this->m[1][2] * m1.m[2][3]));
+	matFinal.m[1][0] = this->m[1][0] * m1.m[0][0] + (this->m[1][1] * m1.m[1][0] + (this->m[1][2] * m1.m[2][0] + (this->m[1][3] * m1.m[3][0])));
+	matFinal.m[1][1] = this->m[1][0] * m1.m[0][1] + (this->m[1][1] * m1.m[1][1] + (this->m[1][2] * m1.m[2][1] + (this->m[1][3] * m1.m[3][1])));
+	matFinal.m[1][2] = this->m[1][0] * m1.m[0][2] + (this->m[1][1] * m1.m[1][2] + (this->m[1][2] * m1.m[2][2] + (this->m[1][3] * m1.m[3][2])));
+	matFinal.m[1][3] = this->m[1][0] * m1.m[0][3] + (this->m[1][1] * m1.m[1][3] + (this->m[1][2] * m1.m[2][3] + (this->m[1][3] * m1.m[3][3])));
 
-	matFinal.m[2][0] = this->m[2][0] * m1.m[0][0] + (this->m[2][1] * m1.m[1][0] + (this->m[2][2] * m1.m[2][0]));
-	matFinal.m[2][1] = this->m[2][0] * m1.m[0][1] + (this->m[2][1] * m1.m[1][1] + (this->m[2][2] * m1.m[2][1]));
-	matFinal.m[2][2] = this->m[2][0] * m1.m[0][2] + (this->m[2][1] * m1.m[1][2] + (this->m[2][2] * m1.m[2][2]));
-	matFinal.m[2][3] = this->m[2][0] * m1.m[0][3] + (this->m[2][1] * m1.m[1][3] + (this->m[2][2] * m1.m[2][3]));
+	matFinal.m[2][0] = this->m[2][0] * m1.m[0][0] + (this->m[2][1] * m1.m[1][0] + (this->m[2][2] * m1.m[2][0] + (this->m[2][3] * m1.m[3][0])));
+	matFinal.m[2][1] = this->m[2][0] * m1.m[0][1] + (this->m[2][1] * m1.m[1][1] + (this->m[2][2] * m1.m[2][1] + (this->m[2][3] * m1.m[3][1])));
+	matFinal.m[2][2] = this->m[2][0] * m1.m[0][2] + (this->m[2][1] * m1.m[1][2] + (this->m[2][2] * m1.m[2][2] + (this->m[2][3] * m1.m[3][2])));
+	matFinal.m[2][3] = this->m[2][0] * m1.m[0][3] + (this->m[2][1] * m1.m[1][3] + (this->m[2][2] * m1.m[2][3] + (this->m[2][3] * m1.m[3][3])));
 
-	matFinal.m[3][0] = this->m[3][0] * m1.m[0][0] + (this->m[3][1] * m1.m[1][0] + (this->m[3][2] * m1.m[2][0]));
-	matFinal.m[3][1] = this->m[3][0] * m1.m[0][1] + (this->m[3][1] * m1.m[1][1] + (this->m[3][2] * m1.m[2][1]));
-	matFinal.m[3][2] = this->m[3][0] * m1.m[0][2] + (this->m[3][1] * m1.m[1][2] + (this->m[3][2] * m1.m[2][2]));
-	matFinal.m[3][3] = this->m[3][0] * m1.m[0][3] + (this->m[3][1] * m1.m[1][3] + (this->m[3][2] * m1.m[2][3]));
+	matFinal.m[3][0] = this->m[3][0] * m1.m[0][0] + (this->m[3][1] * m1.m[1][0] + (this->m[3][2] * m1.m[2][0] + (this->m[3][3] * m1.m[3][0])));
+	matFinal.m[3][1] = this->m[3][0] * m1.m[0][1] + (this->m[3][1] * m1.m[1][1] + (this->m[3][2] * m1.m[2][1] + (this->m[3][3] * m1.m[3][1])));
+	matFinal.m[3][2] = this->m[3][0] * m1.m[0][2] + (this->m[3][1] * m1.m[1][2] + (this->m[3][2] * m1.m[2][2] + (this->m[3][3] * m1.m[3][2])));
+	matFinal.m[3][3] = this->m[3][0] * m1.m[0][3] + (this->m[3][1] * m1.m[1][3] + (this->m[3][2] * m1.m[2][3] + (this->m[3][3] * m1.m[3][3])));
 
 	return matFinal;
 }
@@ -571,10 +608,9 @@ Mat4 Mat4::operator*(const Mat4 & m1)
 vect4 Mat4::multiP(const vect4 & v1, const Mat4 & m2)
 {
 	vect4 vectorFinal;
-	vectorFinal.v[0] = v1.v[0] * m2.m[0][0] + (v1.v[1] * m2.m[0][1] + (v1.v[2] * m2.m[0][2]));
-	vectorFinal.v[1] = v1.v[0] * m2.m[1][0] + (v1.v[1] * m2.m[1][1] + (v1.v[2] * m2.m[1][2]));
-	vectorFinal.v[2] = v1.v[0] * m2.m[2][0] + (v1.v[1] * m2.m[2][1] + (v1.v[2] * m2.m[2][2]));
-	vectorFinal.v[3] = v1.v[0] * m2.m[3][0] + (v1.v[1] * m2.m[3][1] + (v1.v[2] * m2.m[3][2]));
-
+	vectorFinal.v[0] = v1.v[0] * m2.m[0][0] + (v1.v[1] * m2.m[0][1] + (v1.v[2] * m2.m[0][2] + (v1.v[3] * m2.m[0][3])));
+	vectorFinal.v[1] = v1.v[0] * m2.m[1][0] + (v1.v[1] * m2.m[1][1] + (v1.v[2] * m2.m[1][2] + (v1.v[3] * m2.m[1][3])));
+	vectorFinal.v[2] = v1.v[0] * m2.m[2][0] + (v1.v[1] * m2.m[2][1] + (v1.v[2] * m2.m[2][2] + (v1.v[3] * m2.m[2][3])));
+	vectorFinal.v[3] = v1.v[0] * m2.m[3][0] + (v1.v[1] * m2.m[3][1] + (v1.v[2] * m2.m[3][2] + (v1.v[3] * m2.m[3][3])));
 	return vectorFinal;
 }
