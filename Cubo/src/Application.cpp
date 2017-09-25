@@ -190,6 +190,16 @@ void Application::clearScreen()
 		_screenBuffer[i] = 0;
 }
 
+vect4 Application::Cross(const vect4 & v1, const vect4 & v2)
+{
+	vect4 vectorResultante;
+	vectorResultante.v[0] = v1.v[1] * v2.v[2] - v1.v[2] * v2.v[0];
+	vectorResultante.v[1] = (v1.v[0] * v2.v[2] - v1.v[2] * v2.v[2]) * -1;
+	vectorResultante.v[2] = v1.v[0] * v2.v[1] - v2.v[0] * v1.v[1];
+
+	return vectorResultante;
+}
+
 void Application::initTextures()
 {
 	int img_width, img_height;
@@ -530,6 +540,7 @@ vect3::vect3()
 
 }
 
+
 vect4::vect4(float x, float y, float z)
 {
 	v[0] = x;
@@ -545,25 +556,25 @@ vect4::vect4()
 Mat4 Mat4::operator*(const Mat4 & m1)
 {
 	Mat4 matFinal;
-	matFinal.m[0][0] = this->m[0][0] * m1.m[0][0] + (this->m[0][1] * m1.m[1][0] + (this->m[0][2] * m1.m[2][0]));
-	matFinal.m[0][1] = this->m[0][0] * m1.m[0][1] + (this->m[0][1] * m1.m[1][1] + (this->m[0][2] * m1.m[2][1]));
-	matFinal.m[0][2] = this->m[0][0] * m1.m[0][2] + (this->m[0][1] * m1.m[1][2] + (this->m[0][2] * m1.m[2][2]));
-	matFinal.m[0][2] = this->m[0][0] * m1.m[0][3] + (this->m[0][1] * m1.m[1][3] + (this->m[0][2] * m1.m[2][3]));
+	matFinal.m[0][0] = this->m[0][0] * m1.m[0][0] + (this->m[0][1] * m1.m[1][0] + (this->m[0][2] * m1.m[2][0] + (this->m[0][3] * m1.m[3][0])));
+	matFinal.m[0][1] = this->m[0][0] * m1.m[0][1] + (this->m[0][1] * m1.m[1][1] + (this->m[0][2] * m1.m[2][1] + (this->m[0][3] * m1.m[3][1])));
+	matFinal.m[0][2] = this->m[0][0] * m1.m[0][2] + (this->m[0][1] * m1.m[1][2] + (this->m[0][2] * m1.m[2][2] + (this->m[0][3] * m1.m[3][2])));
+	matFinal.m[0][3] = this->m[0][0] * m1.m[0][3] + (this->m[0][1] * m1.m[1][3] + (this->m[0][2] * m1.m[2][3] + (this->m[0][3] * m1.m[3][3])));
 
-	matFinal.m[1][0] = this->m[1][0] * m1.m[0][0] + (this->m[1][1] * m1.m[1][0] + (this->m[1][2] * m1.m[2][0]));
-	matFinal.m[1][1] = this->m[1][0] * m1.m[0][1] + (this->m[1][1] * m1.m[1][1] + (this->m[1][2] * m1.m[2][1]));
-	matFinal.m[1][2] = this->m[1][0] * m1.m[0][2] + (this->m[1][1] * m1.m[1][2] + (this->m[1][2] * m1.m[2][2]));
-	matFinal.m[1][3] = this->m[1][0] * m1.m[0][3] + (this->m[1][1] * m1.m[1][3] + (this->m[1][2] * m1.m[2][3]));
+	matFinal.m[1][0] = this->m[1][0] * m1.m[0][0] + (this->m[1][1] * m1.m[1][0] + (this->m[1][2] * m1.m[2][0] + (this->m[1][3] * m1.m[3][0])));
+	matFinal.m[1][1] = this->m[1][0] * m1.m[0][1] + (this->m[1][1] * m1.m[1][1] + (this->m[1][2] * m1.m[2][1] + (this->m[1][3] * m1.m[3][1])));
+	matFinal.m[1][2] = this->m[1][0] * m1.m[0][2] + (this->m[1][1] * m1.m[1][2] + (this->m[1][2] * m1.m[2][2] + (this->m[1][3] * m1.m[3][2])));
+	matFinal.m[1][3] = this->m[1][0] * m1.m[0][3] + (this->m[1][1] * m1.m[1][3] + (this->m[1][2] * m1.m[2][3] + (this->m[1][3] * m1.m[3][3])));
 
-	matFinal.m[2][0] = this->m[2][0] * m1.m[0][0] + (this->m[2][1] * m1.m[1][0] + (this->m[2][2] * m1.m[2][0]));
-	matFinal.m[2][1] = this->m[2][0] * m1.m[0][1] + (this->m[2][1] * m1.m[1][1] + (this->m[2][2] * m1.m[2][1]));
-	matFinal.m[2][2] = this->m[2][0] * m1.m[0][2] + (this->m[2][1] * m1.m[1][2] + (this->m[2][2] * m1.m[2][2]));
-	matFinal.m[2][3] = this->m[2][0] * m1.m[0][3] + (this->m[2][1] * m1.m[1][3] + (this->m[2][2] * m1.m[2][3]));
+	matFinal.m[2][0] = this->m[2][0] * m1.m[0][0] + (this->m[2][1] * m1.m[1][0] + (this->m[2][2] * m1.m[2][0] + (this->m[2][3] * m1.m[3][0])));
+	matFinal.m[2][1] = this->m[2][0] * m1.m[0][1] + (this->m[2][1] * m1.m[1][1] + (this->m[2][2] * m1.m[2][1] + (this->m[2][3] * m1.m[3][1])));
+	matFinal.m[2][2] = this->m[2][0] * m1.m[0][2] + (this->m[2][1] * m1.m[1][2] + (this->m[2][2] * m1.m[2][2] + (this->m[2][3] * m1.m[3][2])));
+	matFinal.m[2][3] = this->m[2][0] * m1.m[0][3] + (this->m[2][1] * m1.m[1][3] + (this->m[2][2] * m1.m[2][3] + (this->m[2][3] * m1.m[3][3])));
 
-	matFinal.m[3][0] = this->m[3][0] * m1.m[0][0] + (this->m[3][1] * m1.m[1][0] + (this->m[3][2] * m1.m[2][0]));
-	matFinal.m[3][1] = this->m[3][0] * m1.m[0][1] + (this->m[3][1] * m1.m[1][1] + (this->m[3][2] * m1.m[2][1]));
-	matFinal.m[3][2] = this->m[3][0] * m1.m[0][2] + (this->m[3][1] * m1.m[1][2] + (this->m[3][2] * m1.m[2][2]));
-	matFinal.m[3][3] = this->m[3][0] * m1.m[0][3] + (this->m[3][1] * m1.m[1][3] + (this->m[3][2] * m1.m[2][3]));
+	matFinal.m[3][0] = this->m[3][0] * m1.m[0][0] + (this->m[3][1] * m1.m[1][0] + (this->m[3][2] * m1.m[2][0] + (this->m[3][3] * m1.m[3][0])));
+	matFinal.m[3][1] = this->m[3][0] * m1.m[0][1] + (this->m[3][1] * m1.m[1][1] + (this->m[3][2] * m1.m[2][1] + (this->m[3][3] * m1.m[3][1])));
+	matFinal.m[3][2] = this->m[3][0] * m1.m[0][2] + (this->m[3][1] * m1.m[1][2] + (this->m[3][2] * m1.m[2][2] + (this->m[3][3] * m1.m[3][2])));
+	matFinal.m[3][3] = this->m[3][0] * m1.m[0][3] + (this->m[3][1] * m1.m[1][3] + (this->m[3][2] * m1.m[2][3] + (this->m[3][3] * m1.m[3][3])));
 
 	return matFinal;
 }
@@ -571,10 +582,9 @@ Mat4 Mat4::operator*(const Mat4 & m1)
 vect4 Mat4::multiP(const vect4 & v1, const Mat4 & m2)
 {
 	vect4 vectorFinal;
-	vectorFinal.v[0] = v1.v[0] * m2.m[0][0] + (v1.v[1] * m2.m[0][1] + (v1.v[2] * m2.m[0][2]));
-	vectorFinal.v[1] = v1.v[0] * m2.m[1][0] + (v1.v[1] * m2.m[1][1] + (v1.v[2] * m2.m[1][2]));
-	vectorFinal.v[2] = v1.v[0] * m2.m[2][0] + (v1.v[1] * m2.m[2][1] + (v1.v[2] * m2.m[2][2]));
-	vectorFinal.v[3] = v1.v[0] * m2.m[3][0] + (v1.v[1] * m2.m[3][1] + (v1.v[2] * m2.m[3][2]));
-
+	vectorFinal.v[0] = v1.v[0] * m2.m[0][0] + (v1.v[1] * m2.m[0][1] + (v1.v[2] * m2.m[0][2] + (v1.v[3] * m2.m[0][3])));
+	vectorFinal.v[1] = v1.v[0] * m2.m[1][0] + (v1.v[1] * m2.m[1][1] + (v1.v[2] * m2.m[1][2] + (v1.v[3] * m2.m[1][3])));
+	vectorFinal.v[2] = v1.v[0] * m2.m[2][0] + (v1.v[1] * m2.m[2][1] + (v1.v[2] * m2.m[2][2] + (v1.v[3] * m2.m[2][3])));
+	vectorFinal.v[3] = v1.v[0] * m2.m[3][0] + (v1.v[1] * m2.m[3][1] + (v1.v[2] * m2.m[3][2] + (v1.v[3] * m2.m[3][3])));
 	return vectorFinal;
 }
