@@ -81,7 +81,10 @@ public:
 	vect4 Normalize(const vect4 &v);
 	Mat4 LookAt(vect4 eye, vect4 target, vect4 up);
 	vect4 Resta(const vect4 &v1, const vect4 &v2);
-
+	Mat4 Perspectiva(float fovyInDegrees, float aspectRatio,
+		float znear, float zfar);
+	Mat4 glhFrustumf2(float left, float right, float bottom, float top,
+		float znear, float zfar);
 
 	Mat3 mtrx;
 	Mat3 RotateMatrix;
