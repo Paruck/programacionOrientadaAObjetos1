@@ -588,3 +588,4 @@ vect4 Mat4::multiP(const vect4 & v1, const Mat4 & m2)
 	vectorFinal.v[3] = v1.v[0] * m2.m[3][0] + (v1.v[1] * m2.m[3][1] + (v1.v[2] * m2.m[3][2] + (v1.v[3] * m2.m[3][3])));
 	return vectorFinal;
 }
+
