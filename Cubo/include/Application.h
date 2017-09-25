@@ -26,7 +26,6 @@ public:
 class vect4 {
 public:
 	float v[4];
-
 	vect4(float x, float y, float z);
 	vect4();
 };
@@ -74,10 +73,14 @@ public:
 	void sierpinskyAlgorithm(vect3 a, vect3 b, vect3 c, int subDiv);
 	static Mat3 Rotation(const float& angulo);
 	static Mat3 Translation(const float &x, const float &y);
+	static Mat4 Traslacion(const float &x, const float &y, const float & z);
 	static Mat4 RotationX(const float & angulo);
 	static Mat4 RotationY(const float & angulo);
 	static Mat4 RotationZ(const float & angulo);
 	std::vector<vect4> crearCubo();
+	vect4 Normalize(const vect4 &v);
+	Mat4 LookAt(vect4 eye, vect4 target, vect4 up);
+	vect4 Resta(const vect4 &v1, const vect4 &v2);
 
 
 	Mat3 mtrx;
@@ -116,7 +119,7 @@ private:
 	Mat3 Final;
 	std::vector<vect4> vertices1;
 	std::vector<vect4> verticesF;
-
+	vect4 Cross(const vect4 &v1, const vect4 &v2 );
 	glm::vec3 myLightPosition;
 	GLuint uMyLightPosition[2];	
 
