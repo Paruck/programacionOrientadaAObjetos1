@@ -1,0 +1,9 @@
+﻿  Application.cpp
+  Generando código...
+  Compilando...
+  Main.cpp
+c:\users\emi_s_000\documents\graficacion\projectoscg2\pac-man_emiliomalagon\src\main.cpp(54): warning C4129: ' ': secuencia de escape de carácter no reconocida
+c:\users\emi_s_000\documents\graficacion\projectoscg2\pac-man_emiliomalagon\src\main.cpp(55): warning C4129: ' ': secuencia de escape de carácter no reconocida
+  Generando código...
+  PAC-MAN_EmilioMalagon.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\PAC-MAN_EmilioMalagon.exe
+  PAC-MAN_EmilioMalagon.vcxproj -> C:\Users\emi_s_000\Documents\Graficacion\ProjectosCG2\x64\Debug\PAC-MAN_EmilioMalagon.pdb (Partial PDB)
